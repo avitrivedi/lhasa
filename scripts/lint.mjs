@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 const pages = ["index.html", "dandho/index.html", "khata/index.html", "pulse/index.html"];
 const publicOrigin = "https://avitrivedi.github.io";
-const publicBase = "/avis-lighthouse/";
+const publicBase = "/lhasa/";
 const documents = pages.map((path) => [path, readFileSync(resolve("site", path), "utf8")]);
 const css = readFileSync(resolve("site/styles.css"), "utf8");
 const errors = [];

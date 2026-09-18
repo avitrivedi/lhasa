@@ -45,7 +45,7 @@ test("contact and article routes are real and static", () => {
 
 test("deployment URLs are project-subpath safe", () => {
   const publicOrigin = "https://avitrivedi.github.io";
-  const publicBase = "/avis-lighthouse/";
+  const publicBase = "/lhasa/";
   assert.match(home, new RegExp(`<link rel="canonical" href="${publicOrigin}${publicBase}">`));
   assert.match(home, new RegExp(`<meta property="og:image" content="${publicOrigin}${publicBase}social-card\\.png">`));
   assert.doesNotMatch(publicText, /(?:href|src)="\/(?!\/)/);

@@ -1,6 +1,6 @@
 # Lhasa
 
-Source for Lhasa, Avi Trivedi’s static personal site: <https://avitrivedi.github.io/avis-lighthouse/>.
+Source for Lhasa, Avi Trivedi’s static personal site: <https://avitrivedi.github.io/lhasa/>.
 
 The site is dependency-free HTML, CSS, and JavaScript. JavaScript updates Boston civil time and the time-based cat pose; pages and links remain usable without it. There is no backend, analytics, tracker, or visitor-side API request.
 
