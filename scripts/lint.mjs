@@ -28,6 +28,8 @@ for (const [path, html] of documents) {
 }
 
 const home = documents[0][1];
+expect(/<title>Lhasa — Avi Trivedi<\/title>/.test(home), "home title must use the Lhasa site identity");
+expect(/<meta property="og:title" content="Lhasa — Avi Trivedi">/.test(home), "home social title must use the Lhasa site identity");
 expect(/<nav class="work-index" aria-labelledby="work-index-title">/.test(home), "home writing index must be labeled");
 expect(/https:\/\/www\.malbek\.io\//.test(home), "Malbek destination is missing");
 expect(/https:\/\/x\.com\/avifacts1/.test(home), "X destination is missing");

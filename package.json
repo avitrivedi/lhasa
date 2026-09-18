@@ -2,7 +2,7 @@
   "name": "avis-lighthouse",
   "version": "0.1.0",
   "private": true,
-  "description": "Avi's lightweight personal website.",
+  "description": "Lhasa, Avi Trivedi’s lightweight personal website.",
   "type": "module",
   "scripts": {
     "lint": "node scripts/lint.mjs",
