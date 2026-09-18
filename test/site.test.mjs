@@ -13,6 +13,9 @@ const publicText = [home, css, ...articles.map(([, html]) => html)].join("\n");
 function instant(value) { return new Date(value); }
 
 test("home is the concise biography, writing index, and Boston footer", () => {
+  assert.match(home, /<title>Lhasa — Avi Trivedi<\/title>/);
+  assert.match(home, /<meta property="og:title" content="Lhasa — Avi Trivedi">/);
+  assert.match(home, /<meta property="og:description" content="Lhasa hosts notes on Dandho, Khata, and Pulse by Avi Trivedi\.">/);
   assert.match(home, /<h1>Avi Trivedi<\/h1>/);
   assert.match(home, /I live in Boston/);
   assert.match(home, /currently work at <a href="https:\/\/www\.malbek\.io\/">Malbek<\/a>/);
@@ -33,6 +36,7 @@ test("contact and article routes are real and static", () => {
     assert.match(home, new RegExp(`href="\\./${name}/"`));
     assert.match(html, /<nav class="article-nav" aria-label="Writing"><a href="\.\.\/">Index<\/a><\/nav>/);
     assert.match(html, /<footer class="article-footer"><a href="\.\.\/">← Back to the index<\/a><\/footer>/);
+    assert.match(html, new RegExp(`<title>${name[0].toUpperCase()}${name.slice(1)} — Lhasa</title>`));
     assert.match(html, /<time datetime="2026-09-08">8 September, 2026<\/time>/);
     assert.ok(html.length > 3500, `${name} essay is incomplete`);
     assert.doesNotMatch(html, /github\.com|private|customer quote|revenue result/i);
